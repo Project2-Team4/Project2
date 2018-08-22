@@ -4,11 +4,19 @@
     "password": "root",
     "database": "exampledb",
     "host": "localhost",
+<<<<<<< HEAD
+=======
+    "port": 8889,
+>>>>>>> ff27a333cd9f7808bbd6c79d55585be16b7dac0b
     "dialect": "mysql"
   },
   "test": {
     "username": "root",
+<<<<<<< HEAD
     "password": null,
+=======
+    "password": "root",
+>>>>>>> ff27a333cd9f7808bbd6c79d55585be16b7dac0b
     "database": "testdb",
     "host": "localhost",
     "dialect": "mysql",
