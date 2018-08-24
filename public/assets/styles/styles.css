@@ -1,7 +1,7 @@
-body,
-.jumbotron {
+body {
   background: #001935;
   text-align: center;
+  font-family: 'Merienda One', cursive;
 }
 
 .main-header  {
@@ -17,6 +17,10 @@ body,
   margin: 20px;
 }
 
+.header-button:hover  {
+  color: #ffee00;
+}
+
 #header-search,
 #mag  {
   color: #0053b3;  
@@ -25,17 +29,19 @@ body,
 }
 
 .name-section {
-  margin: 150px;
+  margin: 40px;
 }
 
 .main {
+  min-height: calc(30vh - 10px);
   margin-bottom: 50px;
+  margin-left: 50px;
 }
 
-
-#main-name  {
-  font-size: 50px;
-  color: #0053b3;
+#main-name,
+#main-q  {
+  font-size: 75px;
+  color: #ffee00;
   opacity: 0;
 }
 
@@ -57,22 +63,20 @@ body,
   color: #0053b3;  
   font-size: 20px;
   border: #0053b3 1px solid;
+  border-radius: 20px;
   margin: 20px;
-  padding-left: 100px;
-  padding-right: 100px;
-  padding-top: 25px;
-  padding-bottom: 25px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 #btn-parents:hover,
 #btn-nannies:hover  {
-  background: #000000;  
-  color: #0053b3; 
+  background: #001935;
+  color: #ffee00;
+  border: #ffee00 1px solid;
 }
-
-
-
-
 
 footer  {
   width: 100%;
