@@ -2,10 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=
-    , initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Create job listing</title>
+    <title>Create a job post</title>
 
     <!-- Icon image -->
     <link rel="shortcut icon" type="img/jpeg" href="assets/image/gaunlet.jpg">
@@ -24,6 +23,7 @@
             <div class="col-md-2"></div>
             <div class="box col-md-8">
                 <h1>Create a job posting</h1>
+                <hr>
                 <form class="col-md-12">
                     <div class="form-row">
                         <div class="col-md-12">
@@ -35,24 +35,27 @@
                     <div class="form-row">
                         <div class="col-md-12">
                             <label>How long do you need care for?</label><br>
-                            <select id="duration" value="pick one">
-                                <option value="">select one</option>
-                                <option value="recurring">Recurring</option>
-                                <option value="one_time">One Time</option>
+                            <select id="duration">
+                                <option value="">Select One</option>
+                                <option value="full-time">Full Time</option>
+                                <option id="head-color" value="part-time">Part Time</option>
+                                <option value="one-time">One Time</option>
                             </select>
-                            
+                            <br>
+                    <!-- ================================== -->
+                    <!-- Time of service -->
                             <label>When do you need care?</label><br>
-                            <input type="text" class="form-control" id="" placeholder="" required>
+                            <input type="text" class="form-control" id="" placeholder="3 Days from this post" required>
                         </div>
                     </div>
-                    <!-- ================================== -->
                     <div class="form-row">
                         <div class="col-md-12">
                             <label>What would you like to pay per hour?</label>
-                            <input type="text" class="form-control" id="" placeholder="" required>
+                            <input type="text" class="form-control" id="" placeholder="$30 an hour" required>
                         </div>
                     </div>
                     <!-- ================================== -->
+                    <!-- Number of kids that needs care -->
                     <div class="form-row">
                         <div class="col-md-12">
                             <label>How many kids need care?</label><br>
@@ -61,19 +64,20 @@
                         </div>
                     </div>
                     <!-- ================================== -->
+                    <!-- List of extra serves -->
                     <div class="form-row">
                         <div class="col-md-12">
                             <label>Select your other needs, and add a brief description</label><br>
-                            <input type="checkbox" name="needs" value="house_keeping"> Light Housekeeping<br>
-                            <input type="checkbox" name="needs" value="meal_prep"> Meal Preparation<br>
-                            <input type="checkbox" name="needs" value="laundry"> Laundry<br>
-                            <input type="checkbox" name="needs" value="Homework"> Homework help<br>
-                            <input type="checkbox" name="needs" value="yard_work"> Yard Work<br>
-                            <input type="checkbox" name="needs" value="pick_up_off"> Pick Up/Drop Offs<br>
+                            <input type="checkbox" class="needs" value="house_keeping"> Light Housekeeping<br>
+                            <input type="checkbox" class="needs" value="meal_prep"> Meal Preparation<br>
+                            <input type="checkbox" class="needs" value="laundry"> Laundry<br>
+                            <input type="checkbox" class="needs" value="Homework"> Homework help<br>
+                            <input type="checkbox" class="needs" value="yard_work"> Yard Work<br>
+                            <input type="checkbox" class="needs" value="pick_up_off"> Pick Up/Drop Offs<br>
                         </div>
                         <!-- They will add a description of extra serves -->
-                        <textarea name="description" id="description" cols="30" rows="10">
-                            
+                        <textarea name="description" id="description" cols="30" rows="10" placeholder="Taking the dog out twice a day">
+                    
                         </textarea>
                     </div>
                     <!-- ================================== -->
@@ -87,7 +91,9 @@
         </div>
     </div>
 </div>
+
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="assets/js/job.js"></script>
 </body>
 </html>
+
