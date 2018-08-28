@@ -1,0 +1,28 @@
+body {
+    color: black;
+}
+.box {
+    background: rgb(255,255,255, .5);
+    /* opacity: 0.7; */
+    padding: 20px;
+}
+.jumbotron {
+    background: black;
+    background-image: url("../images/nanny.jpg"); 
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; 
+}
+label {
+    font-size: 20px;
+}
+
+#duration {
+    /* padding: 40px; */
+    margin: 10px;
+}
+#description {
+    height: 100px;
+    width: 400px;
+    margin-top: 20px;
+}

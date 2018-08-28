@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Create job listing</title>
+
+    <!-- Icon image -->
+    <link rel="shortcut icon" type="img/jpeg" href="assets/image/gaunlet.jpg">
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Hind" rel="stylesheet">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <!-- Style Sheet -->
+    <link rel="stylesheet" href="assets/styles/job.css" type="text/css">
+
+</head>
+<body>
+    <div class="jumbotron">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="box col-md-8">
+                <h1>Create a job posting</h1>
+                <form class="col-md-12">
+                    <div class="form-row">
+                        <div class="col-md-12">
+                            <label>Where do you need care?</label>
+                            <input type="text" class="form-control" id="" placeholder="Philadelphia, PA" required>
+                        </div>
+                    </div>
+                    <!-- ================================== -->
+                    <div class="form-row">
+                        <div class="col-md-12">
+                            <label>How long do you need care for?</label><br>
+                            <select id="duration" value="pick one">
+                                <option value="">select one</option>
+                                <option value="recurring">Recurring</option>
+                                <option value="one_time">One Time</option>
+                            </select>
+                            
+                            <label>When do you need care?</label><br>
+                            <input type="text" class="form-control" id="" placeholder="" required>
+                        </div>
+                    </div>
+                    <!-- ================================== -->
+                    <div class="form-row">
+                        <div class="col-md-12">
+                            <label>What would you like to pay per hour?</label>
+                            <input type="text" class="form-control" id="" placeholder="" required>
+                        </div>
+                    </div>
+                    <!-- ================================== -->
+                    <div class="form-row">
+                        <div class="col-md-12">
+                            <label>How many kids need care?</label><br>
+                            <input type="range" min="1" max="10" value="2" step="1" onchange="sliderChange(this.value)">
+                            <div>Number of kids: <span id="sliderStatus">2</span></div> 
+                        </div>
+                    </div>
+                    <!-- ================================== -->
+                    <div class="form-row">
+                        <div class="col-md-12">
+                            <label>Select your other needs, and add a brief description</label><br>
+                            <input type="checkbox" name="needs" value="house_keeping"> Light Housekeeping<br>
+                            <input type="checkbox" name="needs" value="meal_prep"> Meal Preparation<br>
+                            <input type="checkbox" name="needs" value="laundry"> Laundry<br>
+                            <input type="checkbox" name="needs" value="Homework"> Homework help<br>
+                            <input type="checkbox" name="needs" value="yard_work"> Yard Work<br>
+                            <input type="checkbox" name="needs" value="pick_up_off"> Pick Up/Drop Offs<br>
+                        </div>
+                        <!-- They will add a description of extra serves -->
+                        <textarea name="description" id="description" cols="30" rows="10">
+                            
+                        </textarea>
+                    </div>
+                    <!-- ================================== -->
+                    <br>
+                    <button class="btn btn-primary" type="submit">Submit posting</button>
+                </form>
+        
+            </div>
+            <div class="col-md-2"></div>
+
+        </div>
+    </div>
+</div>
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="assets/js/job.js"></script>
+</body>
+</html>
