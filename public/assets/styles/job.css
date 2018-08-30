@@ -2,7 +2,7 @@ body {
     color: black;
 }
 .box {
-    background: rgb(255,255,255, .5);
+    background: rgb(255,255,255, .7);
     /* opacity: 0.7; */
     padding: 20px;
 }
@@ -16,10 +16,17 @@ body {
 label {
     font-size: 20px;
 }
-
+/* #head-color {
+    background: grey;
+    color: red;
+} */
 #duration {
     /* padding: 40px; */
     margin: 10px;
+    height: 40px;
+    width: 170px;
+    text-align: center;
+
 }
 #description {
     height: 100px;
