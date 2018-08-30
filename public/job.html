@@ -28,7 +28,7 @@
                     <div class="form-row">
                         <div class="col-md-12">
                             <label>Where do you need care?</label>
-                            <input type="text" class="form-control" id="" placeholder="Philadelphia, PA" required>
+                            <input type="text" class="form-control" id="location" placeholder="Philadelphia, PA" required>
                         </div>
                     </div>
                     <!-- ================================== -->
@@ -45,13 +45,13 @@
                     <!-- ================================== -->
                     <!-- Time of service -->
                             <label>When do you need care?</label><br>
-                            <input type="text" class="form-control" id="" placeholder="3 Days from this post" required>
+                            <input type="text" class="form-control" id="date-time" placeholder="3 Days from this post" required>
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="col-md-12">
                             <label>What would you like to pay per hour?</label>
-                            <input type="text" class="form-control" id="" placeholder="$30 an hour" required>
+                            <input type="text" class="form-control" id="pay-rate" placeholder="$20 an hour" required>
                         </div>
                     </div>
                     <!-- ================================== -->
@@ -59,14 +59,19 @@
                     <div class="form-row">
                         <div class="col-md-12">
                             <label>How many kids need care?</label><br>
-                            <input type="range" min="1" max="10" value="2" step="1" onchange="sliderChange(this.value)">
-                            <div>Number of kids: <span id="sliderStatus">2</span></div> 
-                        </div>
-                    </div>
+                            <select id="total-kids">
+                                <option value="">Select One</option>
+                                <option value="one">1</option>
+                                <option value="two">2</option>
+                                <option value="more-than">over 2</option>
+                            </select>
+                            <br>
+                            <br>
                     <!-- ================================== -->
                     <!-- List of extra serves -->
                     <div class="form-row">
                         <div class="col-md-12">
+                            <div id="needs">
                             <label>Select your other needs, and add a brief description</label><br>
                             <input type="checkbox" class="needs" value="house_keeping"> Light Housekeeping<br>
                             <input type="checkbox" class="needs" value="meal_prep"> Meal Preparation<br>
@@ -74,6 +79,7 @@
                             <input type="checkbox" class="needs" value="Homework"> Homework help<br>
                             <input type="checkbox" class="needs" value="yard_work"> Yard Work<br>
                             <input type="checkbox" class="needs" value="pick_up_off"> Pick Up/Drop Offs<br>
+                            </div>
                         </div>
                         <!-- They will add a description of extra serves -->
                         <textarea name="description" id="description" cols="30" rows="10" placeholder="Taking the dog out twice a day">
@@ -82,7 +88,7 @@
                     </div>
                     <!-- ================================== -->
                     <br>
-                    <button class="btn btn-primary" type="submit">Submit posting</button>
+                    <button class="btn btn-primary" id="submit" type="submit">Submit posting</button>
                 </form>
         
             </div>
@@ -93,7 +99,34 @@
 </div>
 
     <script src="https://code.jquery.com/jquery.js"></script>
-    <script src="assets/js/job.js"></script>
+    <script type="text/javascript">
+        $("#submit").on("click", function(event) {
+          event.preventDefault();
+          alert('test');
+    
+          var newJob = {
+            location: $("#location").val().trim(),
+            dateTime: $("#date-time").val().trim(),
+            duration: $("#duration").val().trim(),
+            payRate: $("#pay-rate").val().trim(),
+            totalKids: $("#total-kids").val().trim(),
+            needs: $("#needs").val().trim(),
+            description: $("#description").val().trim()
+          };
+    
+          $.post("/api/listings", newJob)
+            .then(function(data) {
+              console.log(data);
+              alert("Adding new listing...");
+            });
+    
+          // $.get("/api/nannies", newNanny)  
+          //   .then(function(data)  {
+          //     console.log(data);
+          //     alert("Finding nanny...");
+          //   });
+        });
+      </script>
 </body>
 </html>
 

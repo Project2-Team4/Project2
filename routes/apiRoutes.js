@@ -1,24 +1,38 @@
 var db = require("../models");
+// var parents = require("../models/parents.js");
 
 module.exports = function(app) {
-  // Get all examples
-  app.get("/api/examples", function(req, res) {
-    db.Example.findAll({}).then(function(dbExamples) {
-      res.json(dbExamples);
+// Find All Listings and return them to the user with res.json
+// ===========================================================================
+  app.get("/api/listings/", function(req, res) {
+    db.Listing.findAll({})
+      .then(function(dbListing) {
+        res.json(dbListing);
     });
   });
 
-  // Create a new example
-  app.post("/api/examples", function(req, res) {
-    db.Example.create(req.body).then(function(dbExample) {
-      res.json(dbExample);
+//Post a new listing
+// ============================================================
+  app.post("/api/listings", function(req, res) {
+      console.log(req.body);
+      db.Listing.create({
+        location: req.body.location,
+        dateTime: req.body.dateTime,
+        duration: req.body.duration,
+        payRate: req.body.payRate,
+        totalKids: req.body.totalKids,
+        needs: req.body.needs,
+        description: req.body.description
+      })
+        .then(function(dbListing){
+          res.json(dbListing);
+        });
     });
-  });
 
   // Delete an example by id
-  app.delete("/api/examples/:id", function(req, res) {
-    db.Example.destroy({ where: { id: req.params.id } }).then(function(dbExample) {
-      res.json(dbExample);
-    });
-  });
+  // app.delete("/api/examples/:id", function(req, res) {
+  //   db.Example.destroy({ where: { id: req.params.id } }).then(function(dbExample) {
+  //     res.json(dbExample);
+  //   });
+  // });
 };
