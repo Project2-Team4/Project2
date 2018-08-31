@@ -9,6 +9,14 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname + "/../public/nanny.html"));
   }) 
 
+  app.get("/login", function (req, res) {
+    res.sendFile(path.join(__dirname + "/../public/login.html"));
+  }) 
+
+  app.get("/listings", function (req, res) {
+    res.sendFile(path.join(__dirname + "/../public/listings.html"));
+  }) 
+
   app.get("/create-postings", function (req, res) {
     res.sendFile(path.join(__dirname + "/../public/job.html"));
   }) 
