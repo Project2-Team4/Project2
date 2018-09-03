@@ -4,13 +4,13 @@
       "password": "root",
       "database": "login_db",
       "host": "localhost",
-      "port": 8889,
+      "port": 3306,
       "dialect": "mysql"
     },
     "test": {
       "username": "root",
       "password": "root",
-      "database": "nanny",
+      "database": "login_db",
       "host": "localhost",
       "dialect": "mysql",
       "logging": false
