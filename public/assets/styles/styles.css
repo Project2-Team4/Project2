@@ -1,7 +1,17 @@
 body {
-  background-image: url("https://www.kveller.com/wp-content/uploads/2016/04/iStock_000031480158_Medium-1200x800.jpg");
+  background: url("https://www.kveller.com/wp-content/uploads/2016/04/iStock_000031480158_Medium-1200x800.jpg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   text-align: center;
   font-family: 'Merienda One', cursive;
+  position: fixed;
+  width: 100%;
+}
+
+.header-button:hover {
+  color: #0053b3;
 }
 
 .header  {

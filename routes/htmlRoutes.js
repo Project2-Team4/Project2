@@ -5,10 +5,6 @@ var app = express();
 
 module.exports = function(app) {
 
-  app.get("/nanny", function (req, res) {
-    res.sendFile(path.join(__dirname + "/../public/nanny.html"));
-  }) 
-
   app.get("/login", function (req, res) {
     res.sendFile(path.join(__dirname + "/../public/login.html"));
   }) 
