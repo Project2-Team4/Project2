@@ -1,0 +1,3 @@
+DROP DATABASE IF EXISTS sitter;
+CREATE DATABASE sitter;
+
