@@ -1,42 +1,33 @@
 require("dotenv").config();
 var express = require("express");
 var app = express();
+var flash      = require('connect-flash');
+var passport = require("passport");
+var session = require("express-session");
 var bodyParser = require("body-parser");
 var exphbs = require("express-handlebars");
 var db = require("./models");
-var passport = require("passport");
-var session = require("express-session");
+
 var env = require("dotenv").load();
 var PORT = process.env.PORT || 3000;
 
 // Middleware
 // BodyParser
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(express.static("public"));
 //Passport
-app.use(session({
-  secret: 'keyboard cat', // Session Secret
-  resave: true,
-  saveUninitialized:true,
-}));
+app.use(session({ secret: 'keyboard cat',resave: true, saveUninitialized:true})); // session secret
 app.use(passport.initialize());
-app.use(passport.session()); // Persist login Session
-require('./config/passport/passport.js')(passport);
+app.use(passport.session()); // persistent login sessions
+app.use(flash());
 
 // Handlebars
-app.engine(
-  "handlebars",
-  exphbs({
-    defaultLayout: "main"
-  })
-);
-app.set("view engine", "handlebars");
+app.set('public', './public')
+app.engine('hbs', exphbs({extname: '.hbs'}));
+app.set('view engine', '.hbs');
 
-// Routes
-require("./routes/apiRoutes")(app);
-require("./routes/htmlRoutes")(app);
-require("./routes/loginRoutes")(app,passport);
+
 
 
 var syncOptions = { force: false };
@@ -48,6 +39,13 @@ if (process.env.NODE_ENV === "test") {
 }
 
 var models = require("./models");
+
+// Routes
+require("./routes/apiRoutes")(app);
+require("./routes/htmlRoutes")(app);
+var authRoute = require('./routes/auth.js')(app,passport);
+
+require('./config/passport/passport.js')(passport, models.parent , models.user);
 
 models.sequelize.sync().then(function(){
   console.log('Database is working')
