@@ -1,0 +1,61 @@
+body	{
+	background-image: url(/assets/img/wood_pattern_@2X.png);
+	text-align: center;
+	font-family: 'Luckiest Guy', cursive;
+}
+
+.jumbotron	{
+	color: #ffc300;
+	background-color: #dd1021;
+	text-align: left;
+	border: #ffc300 10px groove;
+	margin: 10px;
+}
+
+h1	{
+	margin-top: 50px;
+	font-size: 100px;
+	color: #dd1021;
+}
+
+h2	{
+	color: #dd1021;
+}
+
+h3	{
+	margin-top: 10px;
+	margin-bottom: 10px;
+	color: #ffe5ad;
+}
+
+.house-burger	{
+	margin: 15px;
+}
+
+.order-btn,
+.add-btn	{
+	border-radius: 20px;
+	border: #ffc300 2px solid;
+	color: #dd1021;
+	margin: 10px;
+	background-color: #ffe5ad;
+}
+
+.order-btn:hover,
+.add-btn:hover	{
+	border: #dd1021 2px solid;
+	background-color: #ffc300;
+}
+
+#name	{
+	border: #dd1021 1px solid;
+	background-color: #ffe5ad;
+}
+
+#name:hover	{
+	box-shadow: 4px 4px #dd1021;
+}
+
+footer	{
+	margin-bottom: 50px;
+}

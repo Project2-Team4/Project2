@@ -1,0 +1,78 @@
+
+
+<div class="container">
+      <div class="jumbotron">
+  <div class="row">
+    <div class="col-sm-12 col-md-12 col-lg-12">
+      <h1>JOB LISTINGS</h1> 
+    </div>
+  </div>
+  </div>
+</div>
+    <div class="container">
+          <div class="jumbotron">
+        <div class="row">
+            <div class="col-md-12">
+           
+                <h1>create a job</h1>
+                        <form action="/listings" method="POST">
+          <input type="text" id="name" name="listing_name" placeholder="watch my kids">
+          <button type="submit" class="add-btn">post to listings</button>
+        </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+  <div class="container">
+    <div class="jumbotron">
+    <div class="row">
+      <div class="col-sm-12 col-md-12 col-lg-12">
+        <h3>job listings</h3>
+        {{#each listings}}
+          {{#unless this.expired}}
+            <div class="row">
+              <div class="col-sm-4 col-md-4 col-lg-4">
+                <div class="house-listing">
+                  {{this.listing_name}}
+                </div>
+              </div>
+              <div class="col-sm-8 col-md-8 col-lg-8">
+                <form action="/listings/{{this.id}}?_method=PUT" method="POST">
+                  <button type="submit" class="order-btn">apply</button>
+                </form>
+              </div>
+          </div>
+          {{/unless}}
+        {{/each}}
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--
+      <div class="col-sm-4 col-md-4 col-lg-4">
+          <h3>MY JOBS</h3>
+            {{#each listings}}
+              {{#if this.expired}}
+              <div>
+                {{this.listing_name}}
+              </div>
+              {{/if}}
+            {{/each}}
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+-->
+
+
+
+
+
