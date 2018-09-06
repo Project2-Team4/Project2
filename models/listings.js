@@ -13,11 +13,11 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: false
     },
     payRate: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.STRING,
       allowNull: false
     },
     totalKids: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.STRING,
       allowNull: false
     },
     // needs: {
