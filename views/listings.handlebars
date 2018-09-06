@@ -1,23 +1,27 @@
-
-
 <div class="container">
       <div class="jumbotron">
   <div class="row">
     <div class="col-sm-12 col-md-12 col-lg-12">
-      <h1>JOB LISTINGS</h1> 
+      <h1>create and post a job</h1> 
     </div>
   </div>
   </div>
 </div>
+
     <div class="container">
           <div class="jumbotron">
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-sm-12 col-md-12 col-lg-12">
            
                 <h1>create a job</h1>
-                        <form action="/listings" method="POST">
+          <form action="/listings" method="POST">
+          <label for="listings">description</label>
           <input type="text" id="name" name="listing_name" placeholder="watch my kids">
-          <button type="submit" class="add-btn">post to listings</button>
+          <label for="listings">location</label>
+          <input type="text" id="name" name="listing_location" placeholder="old city">
+          <label for="listings">date</label>          
+          <input type="text" id="name" name="listing_date" placeholder="sept 20">     
+          <button type="submit" class="add-btn">post new job</button>
         </form>
             </div>
         </div>
@@ -32,22 +36,41 @@
     <div class="row">
       <div class="col-sm-12 col-md-12 col-lg-12">
         <h3>job listings</h3>
+
+
+      <ul>
         {{#each listings}}
-          {{#unless this.expired}}
+ <!--         {{#unless this.listing_recurring}} -->
             <div class="row">
-              <div class="col-sm-4 col-md-4 col-lg-4">
-                <div class="house-listing">
+              <div class="col-sm-8 col-md-8 col-lg-8">
+
+                <div class="listing_id">
+                  {{this.id}}
+                </div>
+
+                <div class="listing_name">
                   {{this.listing_name}}
                 </div>
+                <div class="listing_location">
+                  {{this.listing_location}}
+                </div>
+                <div class="listing_date">
+                  {{this.listing_date}}
+                </div>                                   
+                                                      
+                </div>
               </div>
-              <div class="col-sm-8 col-md-8 col-lg-8">
+              <div class="col-sm-4 col-md-4 col-lg-4">
                 <form action="/listings/{{this.id}}?_method=PUT" method="POST">
                   <button type="submit" class="order-btn">apply</button>
                 </form>
               </div>
           </div>
-          {{/unless}}
+  <!--          {{/unless}}  -->
         {{/each}}
+
+</ul>  
+
       </div>
     </div>
   </div>
