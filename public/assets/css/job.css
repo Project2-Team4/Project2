@@ -20,6 +20,7 @@ label {
     margin-top: 20px;
 }
 
+<<<<<<< HEAD:public/assets/css/job.css
 .job-background {
     background-image: url("../images/nanny.jpg"); 
     background-repeat: no-repeat;
@@ -46,3 +47,8 @@ label {
   
 
   
+=======
+#total-kids {
+    width: 100%;
+}
+>>>>>>> a8d23fe319a2f77c852fe9f966b74eff864f411e:public/assets/styles/job.css

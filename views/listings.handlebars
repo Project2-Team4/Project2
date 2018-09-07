@@ -1,0 +1,123 @@
+<div class="container">
+      <div class="jumbotron">
+  <div class="row">
+    <div class="col-sm-12 col-md-12 col-lg-12">
+      <h1>create and post a job</h1> 
+    </div>
+  </div>
+  </div>
+</div>
+
+    <div class="container">
+          <div class="jumbotron">
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12">
+           
+                <h1>create a job</h1>
+          <form action="/listings" method="POST">
+          <label for="listings">name</label>
+          <input type="text" id="name" name="listing_name" placeholder="mr & mrs smith">
+          <label for="listings">description</label>
+          <input type="text" id="name" name="listing_description" placeholder="watch our toddler">          
+          <label for="listings">hourly rate</label>
+          <input type="text" id="name" name="listing_rate" placeholder="watch our toddler">          
+          <label for="listings">location</label>
+          <input type="text" id="name" name="listing_location" placeholder="old city">
+          <label for="listings">date</label>          
+          <input type="text" id="name" name="listing_date" placeholder="sept 20">     
+          <button type="submit" class="add-btn">post new job</button>
+        </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+  <div class="container">
+    <div class="jumbotron">
+    <div class="row">
+      <div class="col-sm-12 col-md-12 col-lg-12">
+        <h3>job listings</h3>
+
+
+      <ul>
+        {{#each listings}}
+ <!--         {{#unless this.listing_recurring}} -->
+            <div class="row">
+              <div class="col-sm-8 col-md-8 col-lg-8">
+
+                <div class="listing_id">
+                  {{this.id}}
+                </div>
+                <div class="listing_name">
+                  {{this.listing_name}}
+                </div>
+                <div class="listing_description">
+                  {{this.listing_description}}
+                </div>
+                 <div class="listing_rate">
+                  {{this.listing_rate}}
+                </div>               
+                <div class="listing_location">
+                  {{this.listing_location}}
+                </div>
+                <div class="listing_date">
+                  {{this.listing_date}}
+                </div>                                   
+                                                      
+                </div>
+              </div>
+              <div class="col-sm-4 col-md-4 col-lg-4">
+    <!--          <form action="/listings/{{this.id}}?_method=PUT" method="POST">-->
+                  <button type="submit" class="apply-btn" id="apply" onclick="applyJob()">apply</button>
+                </form>
+              </div>
+          </div>
+  <!--          {{/unless}}  -->
+        {{/each}}
+
+</ul>  
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script>
+
+function applyJob() {
+    alert("You will be contacted if the job poster wants to date you.")
+  };
+
+
+
+</script>
+
+
+
+<!--
+      <div class="col-sm-4 col-md-4 col-lg-4">
+          <h3>MY JOBS</h3>
+            {{#each listings}}
+              {{#if this.expired}}
+              <div>
+                {{this.listing_name}}
+              </div>
+              {{/if}}
+            {{/each}}
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+-->
+
+
+
+
+
