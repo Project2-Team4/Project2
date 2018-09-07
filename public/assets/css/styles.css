@@ -9,6 +9,11 @@ body {
   position: fixed;
   width: 100%;
 }
+/* --------------------------------------- */
+.nav-buttons {
+  padding: 0px 15px;
+  font-size: 24px;
+}
 
 .header-button:hover {
   color: #0053b3;
@@ -22,24 +27,7 @@ body {
   opacity: 0;
 }
 
-.header-btn  {
-  background: #a0a0a0;
-  color: #0053b3;  
-  border: #a0a0a0;
-  margin: 20px;
-}
-
-.header-btn:hover  {
-  color: #ffee00;
-}
-
-#header-search,
-#mag  {
-  color: #0053b3;  
-  background: #a0a0a0;
-  border: #a0a0a0;
-}
-
+/* ------------------------------------------ */
 .name-section {
   margin: 40px;
 }
@@ -106,6 +94,9 @@ footer  {
 #home-btn {
   margin-left: 50px;
 }
+/* =========================================== */
+
+
 
 
 

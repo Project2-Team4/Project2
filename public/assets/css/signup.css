@@ -1,0 +1,54 @@
+body {
+    /* background-image: url("../images/nanny.jpg"); 
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;   */
+    background: url("https://s-i.huffpost.com/gen/2715996/images/n-NANNY-628x314.jpg") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    /* font-family: 'Merienda One', cursive; */
+    background-size: cover;
+    position: fixed;
+    width: 100%;
+}
+nav {
+    font-family: 'Merienda One', cursive;
+    font-size: 24px;
+}
+
+.nav-buttons {
+    padding: 0px 15px;
+}
+
+#box {
+    margin-top: 40px;
+    background: rgb(255,255,255, .7);
+    padding: 30px;
+}
+.header  {
+    width: 100%;
+    height: 70px;
+    background: #a0a0a0;
+    border-bottom: #0053b3 1px solid;
+    opacity: .7;
+  }
+
+  .header-title {
+    text-align: center;
+    font-size: 160%;
+    margin-top: 15px;
+}
+ /* ======================= */
+ @media screen and (max-width: 1150px) {
+    .header-title {
+      font-size: 20px;
+    }
+  }
+  @media screen and (max-width: 990px) {
+    body {
+        position: absolute;
+    }
+  }
+
+

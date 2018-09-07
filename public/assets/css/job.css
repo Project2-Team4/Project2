@@ -1,0 +1,48 @@
+
+.box {
+    background: rgb(255,255,255, .7);
+    padding: 20px;
+}
+
+label {
+    font-size: 20px;
+}
+
+#duration {
+    margin: 10px;
+    height: 40px;
+    width: 170px;
+    text-align: center;
+}
+#description {
+    height: 100px;
+    width: 400px;
+    margin-top: 20px;
+}
+
+.job-background {
+    background-image: url("../images/nanny.jpg"); 
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; 
+   
+}
+
+/* =============== */
+.nav-buttons {
+    padding: 0px 15px;
+    font-size: 24px;
+  }
+   
+  .header  {
+    width: 100%;
+    height: 70px;
+    /* background: rgb(160,160,160, .7); */
+    background: rgb(255,255,255, .7);
+    background-color: pink;
+    border-bottom: #0053b3 1px solid;
+
+  }
+  
+
+  
