@@ -15,10 +15,20 @@ router.get("/", function(req, res) {
 
 router.post("/listings", function(req, res) {
   listing.insertOne([
-    "listing_name"
-  ], [
-    req.body.listing_name
-  ], function(data) {
+    "id",
+    "listing_name", 
+    "listing_description", 
+    "listing_rate",
+    "listing_location",
+    "listing_date"
+  ], 
+    [req.body.id,
+    req.body.listing_name, 
+    req.body.listing_description,
+    req.body.listing_rate,
+    req.body.listing_location, 
+    req.body.listing_date],
+    function(data) {
     res.redirect("/");
   });
 });
@@ -26,9 +36,7 @@ router.post("/listings", function(req, res) {
 router.put("/listings/:id", function(req, res) {
   var condition = "id = " + req.params.id;
 
-  listing.updateOne({
-    expired: true
-  }, condition, function(data) {
+  listing.updateOne(function(data) {
     res.redirect("/");
   });
 });
