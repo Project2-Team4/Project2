@@ -1,7 +1,22 @@
 body {
-  background-image: url("https://www.kveller.com/wp-content/uploads/2016/04/iStock_000031480158_Medium-1200x800.jpg");
+  background: url("https://www.kveller.com/wp-content/uploads/2016/04/iStock_000031480158_Medium-1200x800.jpg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   text-align: center;
   font-family: 'Merienda One', cursive;
+  position: fixed;
+  width: 100%;
+}
+/* --------------------------------------- */
+.nav-buttons {
+  padding: 0px 15px;
+  font-size: 24px;
+}
+
+.header-button:hover {
+  color: #0053b3;
 }
 
 .header  {
@@ -12,24 +27,7 @@ body {
   opacity: 0;
 }
 
-.header-btn  {
-  background: #a0a0a0;
-  color: #0053b3;  
-  border: #a0a0a0;
-  margin: 20px;
-}
-
-.header-btn:hover  {
-  color: #ffee00;
-}
-
-#header-search,
-#mag  {
-  color: #0053b3;  
-  background: #a0a0a0;
-  border: #a0a0a0;
-}
-
+/* ------------------------------------------ */
 .name-section {
   margin: 40px;
 }
@@ -96,6 +94,9 @@ footer  {
 #home-btn {
   margin-left: 50px;
 }
+/* =========================================== */
+
+
 
 
 

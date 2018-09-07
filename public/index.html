@@ -8,79 +8,65 @@
   <link href="https://fonts.googleapis.com/css?family=Chelsea+Market|Lobster+Two:700|Love+Ya+Like+A+Sister|Merienda+One" rel="stylesheet">
   <script src="https://code.jquery.com/jquery.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="assets/styles/styles.css">
-  <link rel="shortcut icon" type="img/jpeg" href="assets/images/baby-images.jpg">
+  
+  <!-- CSS STYLE SHEET -->
+  <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+  <!-- ICON -->
+  <link rel="shortcut icon" type="img/png" href="assets/images/baby.png">
 </head>
 <body> 
 
-    <div class="index">
-
-        <header class="navbar header">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-2">
-                <a href="/create-postings"><button class="header-button">home</button></a>
-            </div>
-            <div class="col-sm-2">
-              <a href="parent.html"><button class="header-button">parents</button></a>
-            </div>
-            <div class="col-sm-2">
-                <a href=""><button class="header-button">nannies</button></a>
-            </div>
-            
-            <div class="col-sm-2">
-                <a href="login.html"><button class="header-btn">login</button></a>
-            </div>
-            <div class="col-sm-2">
-                <a href="job.html"><button class="header-btn">post</button></a>
-            </div>
-            <div class="col-sm-2">
-                <form class="form-inline md-form form-sm">
-                    <i class="fa fa-search" id="mag" aria-hidden="true"></i>
-                    <input class="form-control form-control-sm ml-3 w-75" id="header-search" type="text" placeholder="Search" aria-label="Search">
-                </form>
-            </div>
-          </div>
+  <!-- <div class="index"> -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light col-md-12 header">
+    <img src="assets/images/baby.png" alt="Baby" height="60px" width="100px">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active nav-buttons">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item nav-buttons">
+          <a class="nav-link" href="about.html">About Us</a>
+        </li>
+        <li class="nav-item nav-buttons">
+          <a class="nav-link" href="dashboard.html">Dashboard</a>
+        </li>
+        <li class="nav-item nav-buttons">
+          <a class="nav-link" href="signin.html">Log In</a>
+        </li>
+        <li class="nav-item nav-buttons">
+          <a class="nav-link" href="signup.html">Sign Up</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+<!-- ========================================================= -->
+  <div class="name-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+            <div id="section-name">city sitters</div>
         </div>
-      </header>
-
-
-
-<div class="name-section">
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-12">
-          <div id="section-name">city sitters</div>
       </div>
     </div>
   </div>
-</div>
-
-
-<div class="main">
-  <div class="container">
-      <div class="row">
-        <div class="col-sm-6">
-
-      <a href="parent.html"><button class="main-parents" id="btn-parents">parents</button></a>
-    
+<!-- ========================================================= -->
+  <div class="main">
+    <div class="container">
+        <div class="row">
+          <div class="col-sm-6">
+            <a href="parent.html"><button class="main-parents" id="btn-parents">parents</button></a>  
+          </div>
+          <div class="col-sm-6">
+            <a href="nanny.html"><button class="main-nannies" id="btn-nannies">sitters</button></a>
+          </div>
+        </div>
+      <div class="main-text">~connecting parents with quality childcare since 2018~</div>       
     </div>
-      
-    <div class="col-sm-6">
-
-      <a href="nanny.html"><button class="main-nannies" id="btn-nannies">sitters</button></a>
-    
-    </div>
-
   </div>
-  <div class="main-text">~connecting parents with quality childcare since 2018~</div>
-           
-  </div>
-</div>
-
-
-
-</div>
+<!-- </div> index -->
 
 <script>
 

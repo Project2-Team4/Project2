@@ -1,0 +1,83 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: url("https://tammygold.com/media/the-parental-unit-nanny.jpg") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    position: fixed;
+    width: 100%;
+}
+
+.card {
+    padding: 10px;
+    background: rgb(255,255,255, .9);
+    /* background: rgb(255,255,255); */
+    text-align: center;
+    margin-top: 40px;
+    border: solid 1px #0053b3;
+}
+
+.pic {
+    width: 50%;
+    margin: 20px;
+}
+
+#main {
+    background: rgb(255,255,255, .7);
+}
+
+.header-title {
+    text-align: center;
+    font-size: 160%;
+    margin-top: 15px;
+}
+
+nav {
+    font-family: 'Merienda One', cursive;
+    font-size: 24px;
+    margin-bottom: 50px;
+}
+
+.nav-buttons {
+    padding: 0px 15px;
+}
+
+#box {
+    margin-top: 50px;
+    background: rgb(255,255,255, .7);
+    padding: 50px;
+    text-align: center;
+}
+
+.header  {
+    width: 100%;
+    height: 70px;
+    background: #a0a0a0;
+    border-bottom: #0053b3 1px solid;
+    opacity: .7;
+  }
+
+  .pad {
+      padding-bottom: 10px;
+  }
+  
+  .button-color {
+    background: #0053b3;
+    color: white;
+  }
+  /* ====================================== */
+  @media screen and (max-width: 1150px) {
+    .header-title {
+      font-size: 20px;
+    }
+  }
+
+  @media screen and (max-width: 990px) {
+    body {
+        position: absolute;
+    }
+  }
