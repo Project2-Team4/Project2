@@ -15,8 +15,12 @@
            
                 <h1>create a job</h1>
           <form action="/listings" method="POST">
+          <label for="listings">name</label>
+          <input type="text" id="name" name="listing_name" placeholder="mr & mrs smith">
           <label for="listings">description</label>
-          <input type="text" id="name" name="listing_name" placeholder="watch my kids">
+          <input type="text" id="name" name="listing_description" placeholder="watch our toddler">          
+          <label for="listings">hourly rate</label>
+          <input type="text" id="name" name="listing_rate" placeholder="watch our toddler">          
           <label for="listings">location</label>
           <input type="text" id="name" name="listing_location" placeholder="old city">
           <label for="listings">date</label>          
@@ -47,10 +51,15 @@
                 <div class="listing_id">
                   {{this.id}}
                 </div>
-
                 <div class="listing_name">
                   {{this.listing_name}}
                 </div>
+                <div class="listing_description">
+                  {{this.listing_description}}
+                </div>
+                 <div class="listing_rate">
+                  {{this.listing_rate}}
+                </div>               
                 <div class="listing_location">
                   {{this.listing_location}}
                 </div>
@@ -61,8 +70,8 @@
                 </div>
               </div>
               <div class="col-sm-4 col-md-4 col-lg-4">
-                <form action="/listings/{{this.id}}?_method=PUT" method="POST">
-                  <button type="submit" class="order-btn">apply</button>
+    <!--          <form action="/listings/{{this.id}}?_method=PUT" method="POST">-->
+                  <button type="submit" class="apply-btn" id="apply" onclick="applyJob()">apply</button>
                 </form>
               </div>
           </div>
@@ -75,6 +84,19 @@
     </div>
   </div>
 </div>
+
+
+<script>
+
+function applyJob() {
+    alert("You will be contacted if the job poster wants to date you.")
+  };
+
+
+
+</script>
+
+
 
 <!--
       <div class="col-sm-4 col-md-4 col-lg-4">

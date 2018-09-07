@@ -17,10 +17,15 @@ router.post("/listings", function(req, res) {
   listing.insertOne([
     "id",
     "listing_name", 
-    "listing_location", 
-    "listing_date"], 
+    "listing_description", 
+    "listing_rate",
+    "listing_location",
+    "listing_date"
+  ], 
     [req.body.id,
     req.body.listing_name, 
+    req.body.listing_description,
+    req.body.listing_rate,
     req.body.listing_location, 
     req.body.listing_date],
     function(data) {
