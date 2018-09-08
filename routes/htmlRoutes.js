@@ -5,17 +5,13 @@ var app = express();
 
 module.exports = function(app) {
 
-  app.get("/login", function (req, res) {
-    res.sendFile(path.join(__dirname + "/../public/login.html"));
-  }) 
+  // app.get("/listings", function (req, res) {
+  //   res.sendFile(path.join(__dirname + "/../public/listings.html"));
+  // }) 
 
-  app.get("/listings", function (req, res) {
-    res.sendFile(path.join(__dirname + "/../public/listings.html"));
-  }) 
-
-  app.get("/create-postings", function (req, res) {
-    res.sendFile(path.join(__dirname + "/../public/job.html"));
-  }) 
+  // app.get("/create-postings", function (req, res) {
+  //   res.sendFile(path.join(__dirname + "/../public/job.html"));
+  // }) 
 
   app.use("/", function (req, res) {
     res.sendFile(path.join(__dirname + "/../public/index.html"));

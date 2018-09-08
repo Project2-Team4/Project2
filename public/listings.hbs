@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Need-A-Nanny</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Chelsea+Market|Lobster+Two:700|Love+Ya+Like+A+Sister|Merienda+One" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <!-- CSS STYLE SHEET -->
+  <link rel="stylesheet" type="text/css" href="assets/styles/styles.css">
+  <!-- ICON -->
+  
+</head>
+<body>
+    <div class="container">
+
+      <!-- Page Heading -->
+      <h1 class="my-4">Job Listings
+        <small><p>find your sitter here</p></small>
+      </h1>
+      <hr>
+
+{{!-- Handle Bars for job post --}}
+      {{#each listings}}
+      <div class="row">
+        <div class="col-md-12">
+          <h3>Project One</h3>
+         
+<h1>Job Title(Looking for babysitter for nights out)</h1>
+     <h2> {{location}} </h2>
+     <h2> {{duration}}</h2>
+     <h2> {{dateTime}}</h2>
+     <h2> {{payRate}}</h2>
+     <h2> {{totalKids}}</h2>
+     <h2> {{description}}</h2>     
+      
+          <a class="btn btn-primary" href="#">Delete or Contact here ? not sure if needed</a>
+        </div>
+      </div>
+      <!-- /.row -->
+
+      <hr>
+      {{/each}}
+
+      
+      <!-- /.row -->
+
+      
+      <footer>
+          <div class="container">
+              <div class="row">
+                <div class="col-sm-12">
+                    <div class="footer-text">~connecting parents with quality childcare since 1968~</div>
+                  </div>
+                </div>
+              </div>
+      </footer>
+
+
+
+      <script type="text/javascript" src="/public/assets/js/listings.js"></script>
+
+
+
+</body>
+</html>
+

@@ -1,16 +1,20 @@
-require("dotenv").config();
-var express = require("express");
-var app = express();
-var bodyParser = require("body-parser");
-var methodOverride = require("method-override");
-var exphbs = require("express-handlebars");
-var db = require("./models");
-var passport = require("passport");
-var session = require("express-session");
-var env = require("dotenv").load();
+//require("dotenv").config();
+var express    = require("express");
+var app        = express();
+var flash      = require('connect-flash')
+var passport   = require('passport')
+var session    = require('express-session')
+var bodyParser = require('body-parser')
+var env        = require('dotenv').load()
+var exphbs     = require('express-handlebars')
+var path       = require('path')
+var db         = require("./models");
+//var methodOverride = require("method-override");
+
+
 var PORT = process.env.PORT || 3000;
 
-var routes = require("./controllers/listings_controller.js");
+
 
 
 // Middleware
@@ -18,28 +22,28 @@ var routes = require("./controllers/listings_controller.js");
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(express.static("public"));
-app.use(methodOverride("_method"));
-//Passport
-app.use(session({
- secret: 'keyboard cat', // Session Secret
- resave: true,
- saveUninitialized:true,
-}));
-app.use(passport.initialize());
-app.use(passport.session()); // Persist login Session
-require('./config/passport/passport.js')(passport);
+//app.use(methodOverride("_method"));
 
-// Handlebars
-app.engine(
- "handlebars",
- exphbs({
-   defaultLayout: "main"
- })
-);
-app.set("view engine", "handlebars");
-app.use("/", routes);
+// For Passport
+app.use(session({ secret: 'keyboard cat',resave: true, saveUninitialized:true})); // session secret
+app.use(passport.initialize());
+app.use(passport.session()); // persistent login sessions
+app.use(flash());
+
+
+ //For Handlebars
+ app.set('views', './public')
+ app.engine('hbs', exphbs({extname: '.hbs'}));
+ app.set('view engine', '.hbs');
+
+
+//Models
+var models = require("./models"); 
 
 // Routes
+
+var authRoute = require('./routes/auth.js')(app,passport);
+require('./config/passport/passport.js')(passport, models.user);
 require("./routes/apiRoutes")(app);
 require("./routes/htmlRoutes")(app);
 // require("./routes/loginRoutes")(app,passport);
