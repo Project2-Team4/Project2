@@ -21,13 +21,28 @@ label {
 
 /* ../images/nanny.jpg */
 
-.job-background {
+/* body {
     background-image: url("https://blackdatingnewhavenconnecticut.files.wordpress.com/2014/02/black_mother_and_child_or_nanny21871643_std146121530.jpg"); 
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center; 
-   
-}
+} */
+body {
+    background-image: url("https://blackdatingnewhavenconnecticut.files.wordpress.com/2014/02/black_mother_and_child_or_nanny21871643_std146121530.jpg"); 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    text-align: center;
+    font-family: 'Merienda One', cursive;
+    width: 100%;
+  }
+
+  .container {
+    background: rgb(255,255,255, .7);
+    padding: 5px; 
+  }
+
 .header-title {
     text-align: center;
     font-size: 160%;
