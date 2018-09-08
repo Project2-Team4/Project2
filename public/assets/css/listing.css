@@ -1,4 +1,3 @@
-
 .box {
     background: rgb(255,255,255, .7);
     padding: 20px;
@@ -23,7 +22,7 @@ label {
 /* ../images/nanny.jpg */
 
 .job-background {
-    background-image: url("../images/nanny.jpg"); 
+    background-image: url("https://blackdatingnewhavenconnecticut.files.wordpress.com/2014/02/black_mother_and_child_or_nanny21871643_std146121530.jpg"); 
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center; 
