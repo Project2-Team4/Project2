@@ -1,30 +1,34 @@
 module.exports = function(sequelize, DataTypes) {
-  var Listing = sequelize.define("Listing", {
-    listing_name: {
-      type: DataTypes.STRING,
-      allowNull: false
-    },
-    listing_description: {
-      type: DataTypes.TEXT,
-      allowNull: false
-    },
-    listing_rate: {
-      type: DataTypes.STRING,
-      allowNull: false
-    },
-    listing_location: {
-      type: DataTypes.STRING,
-      allowNull: false
-    },
-    listing_date: {
-      type: DataTypes.STRING,
-      allowNull: false
-    },
-  });
-  return Listing;
- };
-
-
-
-
-module.exports = listing;
+    var Listing = sequelize.define("Listing", {
+      location: {
+        type: DataTypes.STRING,
+        allowNull: false
+      },
+      duration: {
+        type: DataTypes.STRING,
+        allowNUll: false
+      },
+      dateTime: {
+        type: DataTypes.STRING,
+        allowNull: false
+      },
+      payRate: {
+        type: DataTypes.STRING,
+        allowNull: false
+      },
+      totalKids: {
+        type: DataTypes.STRING,
+        allowNull: false
+      },
+      // needs: {
+      //   type: DataTypes.TEXT,
+      //   allowNull: false
+      // },
+      description: {
+        type: DataTypes.TEXT,
+        allowNull: false
+      },    
+    });
+    return Listing;
+  };
+  
