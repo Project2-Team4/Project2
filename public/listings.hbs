@@ -15,68 +15,66 @@
 </head>
 <body>
   <nav class="navbar navbar-expand-lg navbar-light bg-light col-md-12 header">
-      <img src="assets/images/baby.png" alt="Baby" height="60px" width="100px">
-      <!-- nav left -->
-      <div class="header-title text-center">
-        <p>City Sitters!</p>
-      </div>
-      <!-- nav right -->
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item nav-buttons">
-            <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item nav-buttons">
-            <a class="nav-link" href="/about">About Us</a>
-          </li>
-          {{!-- <li class="nav-item nav-buttons">
-            <a class="nav-link" href="dashboard.html">Dashboard</a>
-          </li> --}} 
-          <li class="nav-item active nav-buttons">
-            <a class="nav-link" href="/signin">Log In</a>
-          </li>
-          <li class="nav-item nav-buttons">
-            <a class="nav-link" href="/signup">Sign Up</a>
-          </li>
-        </ul>
-      </div>
+        <img src="assets/images/baby.png" alt="Baby" height="60px" width="100px">
+
+        <div class="header-title text-center">
+          <p>City Sitters</p>
+        </div>
+        
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active nav-buttons">
+              <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            {{!-- <li class="nav-item nav-buttons">
+              <a class="nav-link" href="/about">About Us</a>
+            </li> --}}
+            <li class="nav-item nav-buttons">
+              <a class="nav-link" href="/dashboard">Dashboard</a>
+            </li>
+            <li class="nav-item nav-buttons">
+              <a class="nav-link" href="/logout">Log Out</a>
+            </li>
+            {{!-- <li class="nav-item nav-buttons">
+              <a class="nav-link" href="/signup">Sign Up</a>
+            </li> --}}
+          </ul>
+        </div>
     </nav>
   <!-- ============================================= -->
     <div class="container">
 
-      <!-- Page Heading -->
-      <h1 class="my-4">Job Listings
-        <small><p>find your sitter here</p></small>
-      </h1>
+      <h1>Job Posting List</h1>
       <hr>
-
-{{!-- Handle Bars for job post --}}
+  
       {{#each listings}}
-      <div class="row">
-        <div class="col-md-12">
-          {{!-- <h3>Job</h3> --}}
-         
-{{!-- <h1>(Looking for babysitter for a night out)</h1> --}}
-     <h2> {{location}} </h2>
-     <h2> {{duration}}</h2>
-     <h2> {{dateTime}}</h2>
-     <h2> {{payRate}}</h2>
-     <h2> {{totalKids}}</h2>
-     <h2> {{description}}</h2>     
-      
-          <a class="btn btn-primary" href="#">Delete or Contact here ? not sure if needed</a>
+      <div class="row" style="margin-top:20px;">
+        <div class="col-md-9"> <!-- Image -->
+        
+        
+          <h5 class="profile-name">{{description}}</h5>
+          <div class="profile-info">
+                        <div class="info"><span class="">Location:</span> {{location}}</div>
+                        <div class="info"><span class="">Frequency:</span> {{duration}}</div>
+                        <div class="info"><span class="">Number of Kids:</span> {{totalKids}}</div>
+                        <div class="info"><span class="">Hourly Rate:</span> {{payRate}}</div>
         </div>
-      </div>
-      <!-- /.row -->
+        </div>
 
-      <hr>
-      {{/each}}
+        <div class="col-md-3 "> <!-- Phone & Social -->
+          <span class="number" style="font-size:18px">Phone:<strong>087-260-999</strong></span>
+          <div class="button" style="padding-top:18px">
+            <a href="" class="btn btn-outline-secondary btn-block">Send Email</a>
+          </div>
+        </div>
+        </div>
+        <hr>
+        {{/each}}
 
-      
-      <!-- /.row -->
+        </div>
 
       
       <footer>
