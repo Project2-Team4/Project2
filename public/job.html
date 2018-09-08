@@ -13,121 +13,115 @@
     <!-- bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <!-- Style Sheet -->
-    <link rel="stylesheet" href="assets/styles/job.css" type="text/css">
+    <link rel="stylesheet" href="assets/css/job.css" type="text/css">
 
 </head>
 <body>
-
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <a class="navbar-brand" href="/index">City Sitters</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                  <ul class="navbar-nav">
-                    <li class="nav-item active">
-                      <a class="nav-link" href="/dashboard">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="/sitters">Sitters</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="/about">About Us</a>
-                    </li>
-                      </ul>
-                      </div>
-              <div>
-                    <ul class="nav navbar-nav">
-                    <li class="nav-item dropdown">
-                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Profile
-                      </a>
-                      <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="/profile">My Profile</a>
-                        <a class="dropdown-item" href="/settings">Settings</a>
-                        <a class="dropdown-item" href="/logout">Log Out</a>
-                      
-                    </li>
-                  </ul>
-                </div>
-              </nav>
-
-    <div class="jumbotron">
+<div class="job-background">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light col-md-12 header">
+        <img src="assets/images/baby.png" alt="Baby" height="60px" width="100px">
+        <!-- nav left -->
+        <div class="header-title text-center">
+          <p>City Sitters!</p>
+        </div>
+        <!-- nav right -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item nav-buttons">
+              <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item nav-buttons">
+              <a class="nav-link" href="/about">About Us</a>
+            </li>
+            <!-- <li class="nav-item nav-buttons">
+              <a class="nav-link" href="dashboard.html">Dashboard</a>
+            </li> -->
+            <li class="nav-item nav-buttons">
+              <a class="nav-link" href="/signin">Log In</a>
+            </li>
+            <li class="nav-item nav-buttons">
+              <a class="nav-link" href="/signup">Sign Up</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+<!-- =============================================== -->
     <div class="container">
         <div class="row">
             <div class="col-md-2"></div>
-            <div class="box col-md-8">
-                <h1>Create a job posting</h1>
-                <hr>
-                <form class="col-md-12">
-                    <div class="form-row">
-                        <div class="col-md-12">
-                            <label>Where do you need care?</label>
-                            <input type="text" class="form-control" id="location" placeholder="Philadelphia, PA" required>
-                        </div>
-                    </div>
-                    <!-- ================================== -->
-                    <div class="form-row">
-                        <div class="col-md-12">
-                            <label>How long do you need care for?</label><br>
-                            <select id="duration">
-                                <option value="">Select One</option>
-                                <option value="full-time">Full Time</option>
-                                <option id="head-color" value="part-time">Part Time</option>
-                                <option value="one-time">One Time</option>
-                            </select>
-                            <br>
-                    <!-- ================================== -->
-                    <!-- Time of service -->
-                            <label>When do you need care?</label><br>
-                            <input type="text" class="form-control" id="date-time" placeholder="Friday" required>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="col-md-12">
-                            <label>What would you like to pay per hour?</label>
-                            <input type="text" class="form-control" id="pay-rate" placeholder="$20 an hour" required>
-                        </div>
-                    </div>
-                    <!-- ================================== -->
-                    <!-- Number of kids that needs care -->
-                    <div class="form-row">
-                        <div class="col-md-12">
-                            <label>Who needs care?</label><br>
-                            <input type="text" class="form-control" id="total-kids" placeholder="Two toddlers" required>
-                        </div>
-                    </div>
-                    <!-- ================================== -->
-                    <!-- List of extra serves -->
-                    <div class="form-row">
-                        <div class="col-md-12">
-                            <div id="needs">
-                            <label>For additional needs: <br>See our list of examples and choose one or create your own:</label><br>
-                            <input type="hidden" class="needs" value="house_keeping"> Light Housekeeping<br>
-                            <input type="hidden" class="needs" value="meal_prep"> Meal Preparation<br>
-                            <input type="hidden" class="needs" value="laundry"> Laundry<br>
-                            <input type="hidden" class="needs" value="Homework"> Homework help<br>
-                            <input type="hidden" class="needs" value="yard_work"> Yard Work<br>
-                            <input type="hidden" class="needs" value="pick_up_off"> Pick Up/Drop Offs<br>
+                <div class="box col-md-8">
+                    <h1>Create a job posting</h1>
+                    <hr>
+                    <form class="col-md-12">
+                        <div class="form-row">
+                            <div class="col-md-12">
+                                <label>Where do you need care?</label>
+                                <input type="text" class="form-control" id="location" placeholder="Philadelphia, PA" required>
                             </div>
                         </div>
-                        <!-- They will add a description of extra serves -->
-                        <textarea name="description" id="description" cols="30" rows="10" placeholder="Taking the dog out twice a day">
-                    
-                        </textarea>
-                    </div>
-                    <!-- ================================== -->
-                    <br>
-                    <button class="btn btn-primary" id="submit" type="submit">Submit posting</button>
-                </form>
+                        <!-- ================================== -->
+                        <div class="form-row">
+                            <div class="col-md-12">
+                                <label>How long do you need care for?</label><br>
+                                <select id="duration">
+                                    <option value="">Select One</option>
+                                    <option value="full-time">Full Time</option>
+                                    <option id="head-color" value="part-time">Part Time</option>
+                                    <option value="one-time">One Time</option>
+                                </select>
+                                <br>
+                        <!-- ================================== -->
+                        <!-- Time of service -->
+                                <label>When do you need care?</label><br>
+                                <input type="text" class="form-control" id="date-time" placeholder="Friday" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-md-12">
+                                <label>What would you like to pay per hour?</label>
+                                <input type="text" class="form-control" id="pay-rate" placeholder="$20 an hour" required>
+                            </div>
+                        </div>
+                        <!-- ================================== -->
+                        <!-- Number of kids that needs care -->
+                        <div class="form-row">
+                            <div class="col-md-12">
+                                <label>Who needs care?</label><br>
+                                <input type="text" class="form-control" id="total-kids" placeholder="Two toddlers" required>
+                            </div>
+                        </div>
+                        <!-- ================================== -->
+                        <!-- List of extra serves -->
+                        <div class="form-row">
+                            <div class="col-md-12">
+                                <div id="needs">
+                                <label>For additional needs: <br>See our list of examples and choose one or create your own:</label><br>
+                                <input type="hidden" class="needs" value="house_keeping"> Light Housekeeping<br>
+                                <input type="hidden" class="needs" value="meal_prep"> Meal Preparation<br>
+                                <input type="hidden" class="needs" value="laundry"> Laundry<br>
+                                <input type="hidden" class="needs" value="Homework"> Homework help<br>
+                                <input type="hidden" class="needs" value="yard_work"> Yard Work<br>
+                                <input type="hidden" class="needs" value="pick_up_off"> Pick Up/Drop Offs<br>
+                                </div>
+                            </div>
+                            <!-- They will add a description of extra serves -->
+                            <textarea name="description" id="description" cols="30" rows="10" placeholder="Taking the dog out twice a day">
+                        
+                            </textarea>
+                        </div>
+                        <!-- ================================== -->
+                        <br>
+                        <button class="btn btn-primary" id="submit" type="submit">Submit posting</button>
+                    </form>
         
-            </div>
+                </div>
             <div class="col-md-2"></div>
-
         </div>
     </div>
 </div>
-
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
