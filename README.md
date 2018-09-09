@@ -6,19 +6,19 @@ Technologies used:
   We utliized passport to set up the log in page and used a hash key to create the password. Using a hash key prevents a person from being   able to see passwords in the database. 
   
  The Home Page:
-  ![screenshot 47](https://github.com/Project2-Team4/Project2/blob/master/public/assets/images/75.png)
+  ![screenshot 47](https://github.com/Project2-Team4/Project2/master/public/assets/images/75.png)
   
   The Login 
- ![screenshot 47](https://github.com/tjleis25/burger/blob/master/public/assets/img/104.png)
+ ![screenshot 47](https://github.com/tjleis25/burger/master/public/assets/img/104.png)
   
   Sign In
- ![screenshot 47](https://github.com/tjleis25/burger/blob/master/public/assets/img/103.png)
+ ![screenshot 47](https://github.com/tjleis25/burger/master/public/assets/img/103.png)
   
   The Dashboard
-![screenshot 47](https://github.com/tjleis25/burger/blob/master/public/assets/img/burger101.png)
+![screenshot 47](https://github.com/tjleis25/burger/master/public/assets/img/101.png)
   
   Create a Listing  
- ![screenshot 47](https://github.com/tjleis25/burger/blob/master/public/assets/img/burger102.png)
+ ![screenshot 47](https://github.com/tjleis25/burger/master/public/assets/img/102.png)
   
   View a Listing
-  ![screenshot 47](https://github.com/tjleis25/burger/blob/master/public/assets/img/burger100.png)
+  ![screenshot 47](https://github.com/tjleis25/burger/master/public/assets/img/100.png)
