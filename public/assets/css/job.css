@@ -1,69 +1,68 @@
-
 .box {
     background: rgb(255,255,255, .7);
     padding: 20px;
-}
-
-label {
+ }
+ 
+ label {
     font-size: 20px;
-}
-
-#duration {
+ }
+ 
+ #duration {
     margin: 10px;
     height: 40px;
     width: 170px;
     text-align: center;
-}
-#description {
+ }
+ /* #description {
     height: 100px;
     width: 400px;
     margin-top: 20px;
-}
-
-/* ../images/nanny.jpg */
-
-.job-background {
-    background-image: url("../images/nanny.jpg"); 
+ } */
+ 
+ /* ../images/nanny.jpg */
+ 
+ .job-background {
+    background-image: url("../images/nanny.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-position: center; 
-   
-}
-.header-title {
+    background-position: center;
+ 
+ }
+ .header-title {
     text-align: center;
     font-size: 160%;
     margin-top: 15px;
-}
-
-
-/* =============== */
-nav {
+ }
+ 
+ 
+ /* =============== */
+ nav {
     margin-bottom: 40px;
     font-family: 'Merienda One', cursive;
     font-size: 24px;
     /* margin-bottom: 50px; */
-}
-.nav-buttons {
+ }
+ .nav-buttons {
     padding: 0px 15px;
     font-size: 24px;
   }
-   
-.header  {
+ 
+ .header  {
     width: 100%;
     height: 70px;
     /* background: rgb(160,160,160, .7); */
     background: rgb(255,255,255, .7);
     border-bottom: #0053b3 1px solid;
-    opacity: .7;  
-}
-  
-#total-kids {
+    opacity: .7;
+ }
+ 
+ #total-kids {
     width: 100%;
-}
-
-/* ========================================== */
-
-@media screen and (max-width: 1150px) {
+ }
+ 
+ /* ========================================== */
+ 
+ @media screen and (max-width: 1150px) {
     .header-title {
       font-size: 20px;
     }
