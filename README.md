@@ -5,20 +5,20 @@ Technologies used:
   Handlebars/HTML/CSS/Bootstraps for the design. 
   We utliized passport to set up the log in page and used a hash key to create the password. Using a hash key prevents a person from being   able to see passwords in the database. 
   
-  The Home Page:
-  ![](images/Screenshot%20(75).png) 
+ The Home Page:
+  ![screenshot 47](https://github.com/Project2-Team4/Project2/blob/master/public/assets/images/75.png)
   
   The Login 
-  ![](images/Screenshot%20(104).png) 
+ ![screenshot 47](https://github.com/tjleis25/burger/blob/master/public/assets/img/104.png)
   
   Sign In
-  ![](images/Screenshot%20(103).png) 
+ ![screenshot 47](https://github.com/tjleis25/burger/blob/master/public/assets/img/103.png)
   
   The Dashboard
-  ![](images/Screenshot%20(101).png) 
+![screenshot 47](https://github.com/tjleis25/burger/blob/master/public/assets/img/burger101.png)
   
   Create a Listing  
-  ![](images/Screenshot%20(102).png) 
+ ![screenshot 47](https://github.com/tjleis25/burger/blob/master/public/assets/img/burger102.png)
   
   View a Listing
-  ![](images/Screenshot%20(100).png) 
+  ![screenshot 47](https://github.com/tjleis25/burger/blob/master/public/assets/img/burger100.png)
