@@ -6,6 +6,7 @@ Technologies used:
   We utliized passport to set up the log in page and used a hash key to create the password. Using a hash key prevents a person from being   able to see passwords in the database. 
   
   The Home Page:
+
   ![screenshot 47](https://github.com/Project2-Team4/Project2/blob/master/public/assets/images/burger1.png)
   
   The Login 
