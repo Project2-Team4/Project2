@@ -5,20 +5,10 @@ Technologies used:
   Handlebars/HTML/CSS/Bootstraps for the design. 
   We utliized passport to set up the log in page and used a hash key to create the password. Using a hash key prevents a person from being   able to see passwords in the database. 
   
- The Home Page:
-  ![screenshot 47](https://github.com/Project2-Team4/Project2/master/public/assets/images/75.png)
   
-  The Login 
- ![screenshot 47](https://github.com/tjleis25/burger/master/public/assets/img/104.png)
-  
-  Sign In
- ![screenshot 47](https://github.com/tjleis25/burger/master/public/assets/img/103.png)
-  
-  The Dashboard
-![screenshot 47](https://github.com/tjleis25/burger/master/public/assets/img/101.png)
-  
-  Create a Listing  
- ![screenshot 47](https://github.com/tjleis25/burger/master/public/assets/img/102.png)
-  
-  View a Listing
-  ![screenshot 47](https://github.com/tjleis25/burger/master/public/assets/img/100.png)
+ ![screenshot 75](https://user-images.githubusercontent.com/38323356/45836626-5f728300-bcdb-11e8-86cd-98ebb39cb3ad.png)
+![screenshot 104](https://user-images.githubusercontent.com/38323356/45836637-64373700-bcdb-11e8-8b9c-ed995f76cac6.png)
+![screenshot 103](https://user-images.githubusercontent.com/38323356/45836642-6a2d1800-bcdb-11e8-8345-e9f6c917e521.png)
+![screenshot 101](https://user-images.githubusercontent.com/38323356/45836653-7022f900-bcdb-11e8-95fa-46f6b02b1f61.png)
+![screenshot 102](https://user-images.githubusercontent.com/38323356/45836663-7618da00-bcdb-11e8-8fb5-7520cc201cd7.png)
+![screenshot 100](https://user-images.githubusercontent.com/38323356/45836674-7c0ebb00-bcdb-11e8-980d-740aaf36a182.png)
